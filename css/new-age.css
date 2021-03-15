@@ -24,10 +24,10 @@ a:hover, a:focus {
 }
 
 hr {
-  max-width: 100px;
+  max-width: 110px;
   margin: 25px auto 0;
-  border-width: 1px;
-  border-color: rgba(34, 34, 34, 0.1);
+  border: 4px solid #7B44EE;
+  border-radius: 2px;
 }
 
 hr.light {
@@ -57,6 +57,8 @@ section {
 
 section h2 {
   font-size: 50px;
+  color: #2D0065;
+  font-weight: bold;
 }
 
 #mainNav {
@@ -66,11 +68,11 @@ section h2 {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
+  padding-top: 40px;
 }
 
 #logo {
-  width: 40px;
-  height: 40px;
+  width: 313px;
 }
 
 #mainNav .navbar-brand {
@@ -91,7 +93,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav > li > a {
-  font-size: 11px;
+  font-size: 18px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -114,6 +116,13 @@ section h2 {
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
   color: #fdcc52;
+}
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+    padding-left: 250px;
+    padding-right: 250px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -155,28 +164,40 @@ section h2 {
   }
 }
 
+.device-mockup .device {
+  z-index: 100;  
+}
+
 header.masthead {
   position: relative;
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background: url("../img/bg-pattern.png"), #7b4397;
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to bottom, #2D0065, #45028F, #7206Df);
+  overflow: hidden;
 }
 
 header.masthead .header-content {
-  max-width: 500px;
   margin-bottom: 100px;
   text-align: center;
 }
 
-header.masthead .header-content h1 {
-  font-size: 30px;
+header.masthead .header-content .header1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+header.masthead .header-content .header2 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+header.masthead .header-content .header3 {
+  font-size: 27px;
 }
 
 header.masthead .device-container {
-  max-width: 325px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -200,8 +221,18 @@ header.masthead .device-container .screen img {
     font-size: 50px;
   }
   header.masthead .device-container {
-    max-width: 325px;
+    /* max-width: 325px; */
   }
+}
+
+.circle_absolute {
+  width: 994px;
+  height: 994px;
+  position: absolute;
+  border-radius: 50%;
+  right: -63px;
+  top: 257px;
+  background: radial-gradient(50% 50% at 50% 50%, #674AA6 0%, rgba(123, 68, 238, 0.82) 100%);
 }
 
 section.download {
@@ -254,7 +285,7 @@ section.features .section-heading p {
 
 section.features .device-container,
 section.features .feature-item {
-  max-width: 325px;
+  /* max-width: 325px; */
   margin: 0 auto;
 }
 
@@ -269,20 +300,23 @@ section.features .device-container {
 }
 
 section.features .feature-item {
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-bottom: 50px;
-  text-align: center;
+  padding-right: 50px;
+  /* text-align: center; */
 }
 
 section.features .feature-item h3 {
-  font-size: 30px;
+  font-size: 27px;
+  color: #7B44EE;
+  font-weight: bold;
 }
 
 section.features .feature-item i {
   font-size: 80px;
   display: block;
   margin-bottom: 15px;
-  background: linear-gradient(to left, #7b4397, #dc2430);
+  background: #7B44EE;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -326,11 +360,13 @@ section.cta .overlay {
 
 section.contact {
   text-align: center;
+  background-color: #7B44EE;
 }
 
 section.contact h2 {
   margin-top: 0;
   margin-bottom: 25px;
+  color: #FFFFFF;
 }
 
 section.contact h2 i {
@@ -341,6 +377,7 @@ section.contact .contact-form {
   display: flex;
   flex: wrap;
   justify-content: center;
+  margin-top: 100px;
 }
 
 section.contact .contact-form input {
@@ -348,13 +385,30 @@ section.contact .contact-form input {
   background: #fff;
   padding: 14px 10px;
   font-size: 16px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  width: 80%;
+}
+  
+section.contact .contact-form input:active {
+  outline: none;
+}
+
+section.contact .contact-form input:focus {
+  outline: none;
+}
+
+section.contact .contact-form button:active {
+  outline: none;
+}
+
+section.contact .contact-form button:focus {
+  outline: none;
 }
 
 section.contact .contact-form button {
   cursor: pointer;
-  background: #f98d04;
+  background: #2D0065;
   padding: 15px 16px;
   color: #fff;
   border: none;
@@ -363,8 +417,14 @@ section.contact .contact-form button {
   font-weight: 700;
   vertical-align: middle;
   margin-left: -5px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+section.contact .contact-form p {
+  font-size: 26px;
+  color: #ffffff;
+  padding-right: 50px;
 }
 
 section.contact ul.list-social {
@@ -471,7 +531,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 section.news {
   position: relative;
   width: 100%;
-  padding: 30px 0 0 0;
+  background-color: #F1E7FF;
 }
 
 section.news .news-wrapper {
@@ -534,4 +594,35 @@ section.news .tn-right {
 
 section.news .tn-right .col-md-6 {
   padding: 0;
+}
+
+section.news .news_item {
+  border-radius: 30px;
+  width: 100%;
+}
+
+section.news .news_title {
+  text-align: center;
+  margin-top: 35px;
+}
+
+section.news .news_title a {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+section.news .news_title a:hover {
+  color: #FF6F61;
+  text-decoration: none;
+}
+
+section.news .btn {
+  font-size: 20px; 
+  background-color: #7B44EE;
+}
+
+section.news .btn:hover {
+  color: #FF6F61;
 }
