@@ -79,6 +79,12 @@ section h2 {
   color: #7B44EE;
 }
 
+@media (max-width: 991px) {
+  #mainNav #logo_text {
+    color: #7B44EE;
+  }
+}
+
 #logo {
   width: 70px;
 }
